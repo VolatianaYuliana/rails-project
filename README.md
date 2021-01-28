@@ -50,13 +50,13 @@ You can start the rails server using the following command:
 ```
 rails s -p 4001
 ```
-And now you can visit the site with the URL http://localhost:3000
+And now you can visit the site with the URL http://localhost:4001
 
 ## How to repopulate the list of treatments periodically?
 Add the data in the **/db/seeds.rb**.
 
 I created a cron that repopulates the database monthly.
-But if you want to modify the period according to your need, modify the file **/config/schedule.rb**.
+If you want to modify the period according to your need, modify the file **/config/schedule.rb**.
 
 ## How admin can provide the translations for the treatments?
 
@@ -65,5 +65,5 @@ Visit the URL http://localhost:4001/admin and log in to provide translations of 
 - password: admin
 
 
-Treatments translated will be diplayed according to the user browser language, but if no translation was provided, the treatment will be displayed with english as a default value.
+Treatments translated will be diplayed according to the user browser language.If no translation was provided, the treatment will be displayed with english as a default value.
 
