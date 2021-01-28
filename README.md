@@ -29,14 +29,14 @@ bundle install
 ## Initialize the database
 
 ```
-rails db:create db:migrate 
+rake db:create db:migrate 
 ```
 ## Seed the initial data
 
 I have already added treatments in the **/db/seeds.rb** file with the treaments list you provided.
 Run the following command to seed the databasa with those treatments:
 ```
-rake database:seed
+rake db:seed
 ```
 But if you want to seed it with your own initial data, do the following steps:
 * add your initial data in the **/db/seeds.rb** file.
@@ -48,7 +48,7 @@ rake database:repopulate
 ## Start the Rails server
 You can start the rails server using the following command:
 ```
-rails s -p 3000
+rails s -p 4001
 ```
 And now you can visit the site with the URL http://localhost:3000
 
