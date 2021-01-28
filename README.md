@@ -6,14 +6,19 @@ It also permits admin to provide translations (into French or Malagasy) of the t
 
 **Database**: sqlite3
 
-## Install
+## Prerequisites
+The following tools need to be installed:
 - Ruby [2.5.1]
 - Rails [4.2.10]  
 
+## Clone this repository
+```
+git clone https://github.com/VolatianaYuliana/rails-project
+```
 and then enter the project directory
 
 ```
-cd mtomady_coding_challenge
+cd rails-project
 ```
 
 And run the following commands to install the dependencies:
@@ -28,12 +33,24 @@ rails db:create db:migrate
 ```
 ## Seed the initial data
 
-I have already added treatments in the **/db/seeds.rb** file with the treaments list you provided but if you want to seed it with your own initial data, do the following steps:
+I have already added treatments in the **/db/seeds.rb** file with the treaments list you provided.
+Run the following command to seed the databasa with those treatments:
+```
+rake database:seed
+```
+But if you want to seed it with your own initial data, do the following steps:
 * add your initial data in the **/db/seeds.rb** file.
 * run the command:
 ```
 rake database:repopulate
 ```
+
+## Start the Rails server
+You can start the rails server using the following command:
+```
+rails s -p 3000
+```
+And now you can visit the site with the URL http://localhost:3000
 
 ## How to repopulate the list of treatments periodically?
 Add the data in the **/db/seeds.rb**.
