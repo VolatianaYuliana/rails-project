@@ -1,0 +1,27 @@
+<div class="category_list">
+    <h1>Welcome</h1>
+    <h3>Please select a category </h3>
+    <% @categories.each do |c| %>
+        <div >
+            <a href="/categories/<%= c.id %>" class="category"><h3><%= c.name %></h3></a>
+        </div>
+    <% end %>
+</div>
+
+<script defer>
+    var browserLang = navigator.language || navigator.userLanguage;
+
+    categoryClassList = document.querySelectorAll(".category");
+    categoryClassList.forEach(function(el) {
+        var actualHref = el.getAttribute("href");
+        
+        if (!actualHref.includes(browserLang.split("-")[0])) {
+            var finalHref = actualHref + "/" + browserLang.split("-")[0];
+            console.log(finalHref);
+            el.setAttribute("href", finalHref);
+        }
+        
+        
+    });
+   
+</script>

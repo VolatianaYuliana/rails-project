@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  get '/' => 'pages#index'
+
+  get '/categories/:id/:lang' => 'categories#index'
+
+  post '/categories/:id/:lang' => 'categories#create'
+
+  get '/admin/dashboard' => 'admins#home'
+
+  
+  post '/admin/dashboard' => 'admins#update'
+
+  get '/admin' => "admins#login"
+
+  post '/admin' => "admins#auth"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

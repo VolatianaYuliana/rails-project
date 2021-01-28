@@ -1,0 +1,61 @@
+.translation_board {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.translation_board input[type="text"]{
+    font-size:12px;
+    color: #1a5630;
+}
+
+
+.translation_board h2{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.translation_board label{
+    font-size: 14px;
+}
+
+
+.translation_cols {
+    display: flex;
+    justify-content: space-evenly;
+}
+.translation_col {
+    width: 100%;
+}
+
+.login {
+    border: 1px solid #908888;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 150px;
+}
+
+.login h1{
+    text-align: center;
+}
+
+.login_button_container {
+    position: relative;
+    height: 20px;
+}
+
+.login_button {
+    background-color: #31ad31;
+    color: white;
+    width: 75px;
+    position: absolute;
+    bottom: 5px;
+    right: 85px;
+}
+
+
+.save_translation {
+    background-color: #31ad31;
+    color: white;
+    width: 75px;
+}

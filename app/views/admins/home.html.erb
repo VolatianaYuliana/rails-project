@@ -1,0 +1,31 @@
+<div class="translation_board">
+    <h2>TRANSLATION BOARD</h2>
+    <div class="translation_board_lang">
+        <%= form_for :treatment do |f| %>
+            <div class="translation_cols">
+                <% @lang.each do |l| %>
+                    <div class="translation_col <%= l.downcase %>" >
+                        <h3><%= l %></h3>
+                        <% @treatments.each do |t| %>
+                            <label><%=t.name %>:<br/>
+                            <% if l == "French" %>
+                                <input type="text" name="name_fr[<%= t.id %>]" value="<%= t.name_fr %>" size="26">
+                            <% end %>
+
+                            <% if l == "Malagasy" %>
+                            <input type="text" name="name_mg[<%= t.id %>]" value="<%= t.name_mg %>" size="26">
+                            <% end %>
+                            
+                            </label>
+                            
+                            <br/>
+                            <br/>
+                        <% end %>
+                    </div>
+                <% end %>
+            </div>
+            <%= f.submit "Save" , :class => 'save_translation'%>
+        <% end %>
+    </div>
+</div>
+

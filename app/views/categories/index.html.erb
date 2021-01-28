@@ -1,0 +1,22 @@
+<div class="user_info">
+    <%= form_for :user do |f| %>
+        <h2>Select a treatment</h2>
+        <% @treatments_native.each do |t| %>
+            <%= f.radio_button :treatment_id, t.id, :required => true%> <%= t.name %><br />
+        <% end %>
+        <br/>
+        Firstname: <%= f.text_field :first_name, :required => true %>
+        <br />
+        <br />
+        Lastname : <%= f.text_field :last_name, :required => true %>
+        <br />
+        <br />
+        
+        <div class="save_treatment">
+            <%= f.submit "SAVE" , :class => 'save_treatment_button'%>
+        </div>
+    <% end %>
+</div>
+<div class="back_home">
+    <a href="/"><h5>Back to home</h5></a>
+</div>
