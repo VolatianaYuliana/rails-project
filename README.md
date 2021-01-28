@@ -65,5 +65,5 @@ Visit the URL http://localhost:4001/admin and log in to provide translations of 
 - password: admin
 
 
-Treatments translated will be diplayed according to the user browser language.If no translation was provided, the treatment will be displayed with english as a default value.
+Treatments translated will be diplayed according to the user browser language. If no translation was provided, the treatment will be displayed with english as a default value.
 
